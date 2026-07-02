@@ -23,12 +23,13 @@
 </head>
 <body>
   <h1>Fiteo — Privacy Policy</h1>
-  <p class="meta">Last updated: 28 June 2026</p>
+  <p class="meta">Last updated: 2 July 2026</p>
 
   <p>
     Fiteo is a calorie and macronutrient tracker for iPhone. It has no account, no sign-in, and no
-    cloud sync of your personal data. Almost everything stays on your device. The one thing that
-    leaves your device is the meal text you choose to estimate — and only to compute that estimate.
+    cloud sync of your personal data. Almost everything stays on your device. Two things leave your
+    device: the meal text you choose to estimate (only to compute that estimate) and a pseudonymous,
+    non-reversible device identifier used only to count your free estimates before you subscribe.
     This policy explains exactly what is sent, to whom, and what we never collect.
   </p>
 
@@ -55,6 +56,16 @@
     purposes. Google's handling is governed by its own
     <a href="https://policies.google.com/privacy">Privacy Policy</a> and
     <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a>.
+  </p>
+
+  <h2>Free usage limit</h2>
+  <p>
+    Before you subscribe, Fiteo lets you make a small number of free AI estimates. To count these per
+    device — with no account — the app sends a <strong>pseudonymous, non-reversible identifier</strong>:
+    a one-way SHA-256 hash of Apple's per-vendor identifier (<code>identifierForVendor</code>). We never
+    send or store the raw identifier. Our processing service keeps only a running count against this
+    hashed value; it is not linked to your identity, meals, weight, or health data, is never used for
+    advertising or cross-app tracking, and is not shared with anyone. It resets if you delete the app.
   </p>
 
   <h2>Dictation</h2>
@@ -97,7 +108,8 @@
   <ul>
     <li>No account, email, or password.</li>
     <li>No storage of your meals, weight, or health data on our servers — meal text only passes
-        through our service to compute an estimate and is not retained.</li>
+        through our service to compute an estimate and is not retained. (We keep only an anonymous
+        per-device count of free estimates used; see "Free usage limit".)</li>
     <li>No selling or sharing of your data with advertisers or data brokers.</li>
     <li>No location tracking, no advertising identifiers, no cross-app tracking.</li>
   </ul>
