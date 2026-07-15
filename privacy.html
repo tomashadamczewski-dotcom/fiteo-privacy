@@ -23,7 +23,7 @@
 </head>
 <body>
   <h1>Fiteo — Privacy Policy</h1>
-  <p class="meta">Last updated: 14 July 2026</p>
+  <p class="meta">Last updated: 15 July 2026</p>
 
   <p>
     Fiteo is a calorie and macronutrient tracker for iPhone. It has no account, no sign-in, and no
@@ -42,8 +42,9 @@
 
   <h2>Meal estimation (AI)</h2>
   <p>
-    To estimate a meal's calories and macros, the meal description you type (or dictate) is sent — only
-    when you submit a meal — from your device to our processing service (a Cloudflare Worker), which
+    To estimate a meal's calories and macros, the meal description you type, dictate, or record as a
+    voice note is sent — only when you submit a meal — from your device to our processing service (a
+    Cloudflare Worker), which
     forwards it to a third-party AI provider whose large language model (LLM) generates the estimate.
     The provider currently used is <strong>Google (Gemini)</strong>. The provider may change in future
     versions; this page will be updated if it does.
@@ -73,6 +74,23 @@
     If you dictate a meal instead of typing it, Fiteo uses Apple's Speech framework to transcribe your
     voice into text. That text is then handled exactly like typed text (see "Meal estimation" above).
     Speech recognition is governed by <a href="https://www.apple.com/legal/privacy/">Apple's privacy terms</a>.
+  </p>
+
+  <h2>Voice notes</h2>
+  <p>
+    Instead of typing or on-device dictation, you can record a short <strong>voice note</strong> (up to
+    45 seconds) describing your meal. When you submit it, the audio recording is sent — the same way as
+    meal text, and only when you submit — from your device to our processing service (the Cloudflare
+    Worker), which forwards it to <strong>Google (Gemini)</strong>, whose model transcribes it and
+    generates the estimate in a single step.
+  </p>
+  <p>
+    The recording is created on your device solely for this purpose and is deleted immediately after it
+    is sent. It is not stored on your device or on our processing service, and it is not linked to an
+    account or to your identity. As with meal text, we use Google's <strong>paid</strong> Gemini API,
+    under whose terms Google does not use the content to train its models and retains it only briefly for
+    abuse and legal purposes (see "Meal estimation" above). The microphone is used only while you hold
+    the record button.
   </p>
 
   <h2>Apple Health</h2>
